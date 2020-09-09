@@ -1,0 +1,22 @@
+<div class="card">
+  <img src="{{ hero.img }}" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{ hero.nombre }}</h5>
+    <p class="card-text">
+      {{ hero.bio }}
+    </p>
+    <p class="card-text">
+      <small class="text-muted">{{
+        hero.aparicion | date: "longDate":"GMT-5":"es-CO"
+      }}</small>
+    </p>
+    <button
+      type="button"
+      class="btn btn-outline-primary btn-block"
+      (click)="irHeroe()"
+    >
+      More
+    </button>
+    <a [routerLink]="['/hero', hero.id]">Ir a </a>
+  </div>
+</div>

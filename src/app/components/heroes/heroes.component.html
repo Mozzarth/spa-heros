@@ -1,0 +1,11 @@
+<div *ngIf="buscando">
+  <div class="alert alert-primary" role="alert">Buscado.. {{ buscando }}</div>
+</div>
+<hr />
+<div class="card-columns">
+  <app-hero-card
+    (heroeSeleccionado)="heroeSeleccionado($event)"
+    [otroNameHero]="heroe"
+    *ngFor="let heroe of heroes"
+  ></app-hero-card>
+</div>
